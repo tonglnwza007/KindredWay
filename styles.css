@@ -146,6 +146,6 @@ header.scrolled {
 .error {
   color: #e50914;
   font-size: 14px;
-  margin: 0;
+  margin-top:100;
   text-align: center;
 }
