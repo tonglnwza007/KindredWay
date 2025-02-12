@@ -1,11 +1,7 @@
 /* --- Global Styles --- */
 body {
   margin: 0;
-<<<<<<< HEAD
   padding-bottom: 40px; /* เพิ่มพื้นที่ด้านล่าง */
-=======
-  padding: 0;
->>>>>>> 727dd5f30313b0119e06e9029f6b9b53a688e4f4
   background-color: #141414;
   color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
