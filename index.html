@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
+    <title>Who's Watching?</title>
+=======
+    <title>Profile Selection</title>
+>>>>>>> 727dd5f30313b0119e06e9029f6b9b53a688e4f4
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+<body>
+  <!-- Sticky Header -->
+  <header>
+    <h1>Who's Watching?</h1>
+  </header>
+
+  <!-- หน้าเลือกโปรไฟล์ -->
+  <div class="container profiles-page">
+    <div class="profiles">
+      <!-- 16 profiles -->
+      <script>
+        const names = [
+          "atom", "matchim", "kp", "emmey",
+          "praew", "chale", "fang", "many",
+          "molekul", "pinpaporn", "ploy", "ploythun",
+          "radaa", "hana", "m0ey", "view"
+        ];
+      
+        const profilesContainer = document.querySelector('.profiles');
+        for (let i = 0; i < 16; i++) {
+          profilesContainer.innerHTML += `
+            <div class="profile" onclick="showPinPrompt(${i + 1})">
+              <img src="images/profile${i + 1}.PNG" alt="Profile ${i + 1}" />
+              <p>${names[i]}</p>
+            </div>
+          `;
+        }
+      </script>
+    </div>
+  </div>
+
+  <!-- Modal สำหรับใส่ PIN -->
+  <div id="pin-modal" class="modal">
+    <div class="modal-content">
+      <!-- ปุ่มย้อนกลับ (Back Arrow) อยู่ที่มุมบนซ้าย -->
+      <div class="modal-header">
+        <span class="back-arrow" onclick="goBack()">&larr;</span>
+      </div>
+      <!-- ข้อความบอกให้ใส่ PIN -->
+      <p class="pin-instructions">Enter your PIN to access this profile.</p>
+      <!-- ช่องกรอกรหัส 6 ช่อง -->
+      <div id="pin-inputs">
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" autofocus />
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
+<<<<<<< HEAD
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" 
+=======
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
+        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
+>>>>>>> 727dd5f30313b0119e06e9029f6b9b53a688e4f4
+      </div>
+      <!-- ข้อความแจ้งเตือนกรณี PIN ผิด -->
+      <p id="error-msg" class="error"></p>
+    </div>
+  </div>
+</body>
+</html>
