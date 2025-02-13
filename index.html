@@ -49,10 +49,10 @@
       <p class="pin-instructions">Enter your PIN to access this profile.</p>
       <!-- ช่องกรอกรหัส 6 ช่อง -->
       <div id="pin-inputs">
-        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" autofocus />
-        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
-        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" />
-        <input type="password" class="pin-box" maxlength="1" oninput="moveNext(this)" 
+        <input type="text" class="pin-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)" autofocus>
+        <input type="text" class="pin-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)">
+        <input type="text" class="pin-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)">
+        <input type="text" class="pin-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="moveNext(this)" onkeydown="handleBackspace(event, this)">
       </div>
       <!-- ข้อความแจ้งเตือนกรณี PIN ผิด -->
       <p id="error-msg" class="error"></p>
